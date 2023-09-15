@@ -27,14 +27,14 @@ class AuthUserHandlerArgumentResolver : HandlerMethodArgumentResolver {
 
   override fun resolveArgument(parameter: MethodParameter, mavContainer: ModelAndViewContainer?, webRequest: NativeWebRequest, binderFactory: WebDataBinderFactory?): Any? {
     return AuthUser(
-      id = 1,
+      userId = 1,
       name = "test",
     )
   }
 }
 
 data class AuthUser(
-  val id: Long,
+  val userId: Long,
   val name: String,
   val profileUrl: String? = null,
 )
